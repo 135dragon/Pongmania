@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://hk5sge4cgnus"]
+
+[ext_resource type="Script" path="res://Level0/Ball.gd" id="1_omxft"]
+[ext_resource type="Texture2D" uid="uid://b8mqeerdp2al0" path="res://Resources/Paddle.png" id="2_dvtuu"]
+[ext_resource type="AudioStream" uid="uid://dgj8pqi27bmx3" path="res://Resources/244655__greenvwbeetle__pop-1.mp3" id="3_fmeok"]
+[ext_resource type="Texture2D" uid="uid://r64macnpnuub" path="res://Resources/2d_lights_and_shadows_neutral_point_light.webp" id="4_grvdr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqqsp"]
+size = Vector2(25, 20)
+
+[node name="Ball" type="CharacterBody2D"]
+script = ExtResource("1_omxft")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.327161, 0.0517971)
+texture = ExtResource("2_dvtuu")
+offset = Vector2(0, -38.6123)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_eqqsp")
+
+[node name="PopSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fmeok")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("4_grvdr")

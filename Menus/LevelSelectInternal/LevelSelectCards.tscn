@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1ff8d4ayoqme"]
+
+[ext_resource type="Texture2D" uid="uid://cpqrjqcpi2pmf" path="res://Resources/silhouette.png" id="1_cr6ya"]
+[ext_resource type="Script" path="res://Menus/LevelSelectInternal/LevelSelectCards.gd" id="1_qbiwg"]
+[ext_resource type="Theme" uid="uid://vbl1j3ttu35k" path="res://Menus/gameTheme.tres" id="2_ftyk7"]
+
+[node name="CardMarginContainer" type="MarginContainer"]
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_qbiwg")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBox"]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_cr6ya")
+
+[node name="Label" type="Label" parent="VBox"]
+layout_mode = 2
+theme = ExtResource("2_ftyk7")
+text = "A RANNDOM CHILD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

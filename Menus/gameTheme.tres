@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://vbl1j3ttu35k"]
+
+[ext_resource type="FontFile" uid="uid://diehcmorlmovv" path="res://Resources/Yazo.ttf" id="1_5ni7h"]
+
+[resource]
+default_font = ExtResource("1_5ni7h")
+default_font_size = 48

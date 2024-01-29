@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://boarq747q58nw"]
+
+[ext_resource type="Script" path="res://Level0/Score.gd" id="1_fepbn"]
+[ext_resource type="AudioStream" uid="uid://dvd75l83i4akc" path="res://Resources/676401__cjspellsfish__score-1.mp3" id="2_2je46"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yap1g"]
+size = Vector2(73, 709)
+
+[node name="Scoredetector" type="Area2D" node_paths=PackedStringArray("label")]
+script = ExtResource("1_fepbn")
+label = NodePath("")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-43, 335.5)
+shape = SubResource("RectangleShape2D_yap1g")
+
+[node name="ScoreSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_2je46")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

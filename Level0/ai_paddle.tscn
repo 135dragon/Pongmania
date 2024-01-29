@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyftnpfiv0s67"]
+
+[ext_resource type="Script" path="res://Level0/AIPaddle.gd" id="1_5un2a"]
+[ext_resource type="Texture2D" uid="uid://b8mqeerdp2al0" path="res://Resources/Paddle.png" id="2_ihv26"]
+[ext_resource type="Texture2D" uid="uid://r64macnpnuub" path="res://Resources/2d_lights_and_shadows_neutral_point_light.webp" id="3_05dda"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cngyc"]
+size = Vector2(9.5, 33.25)
+
+[node name="AIPaddle" type="CharacterBody2D"]
+scale = Vector2(1, 1.5)
+script = ExtResource("1_5un2a")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-0.125014, 0.56245)
+scale = Vector2(0.12037, 0.0700315)
+texture = ExtResource("2_ihv26")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.4782e-05, 4.95911e-05)
+shape = SubResource("RectangleShape2D_cngyc")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(3.8147e-06, 0)
+scale = Vector2(0.0546875, 0.151042)
+texture = ExtResource("3_05dda")
+metadata/_edit_group_ = true

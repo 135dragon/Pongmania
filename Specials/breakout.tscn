@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk1ssn2qlbelb"]
+
+[ext_resource type="Script" path="res://Specials/breakout.gd" id="1_f5cr3"]
+
+[node name="Breakout" type="Node2D"]
+script = ExtResource("1_f5cr3")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcgftyij5fxp3"]
+
+[ext_resource type="Script" path="res://Menus/Dialogue/dialogue.gd" id="1_5hymm"]
+[ext_resource type="Texture2D" uid="uid://cpqrjqcpi2pmf" path="res://Resources/silhouette.png" id="1_8sw8c"]
+
+[node name="DialogueHBox" type="HBoxContainer"]
+layout_direction = 2
+offset_left = 2.0
+offset_top = 499.0
+offset_right = 1002.0
+offset_bottom = 681.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_5hymm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_8sw8c")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "A game of pong? Don't mind if I do!"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "Continue➡️"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

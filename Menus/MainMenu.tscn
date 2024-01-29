@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://opwfmce0dhpd"]
+
+[ext_resource type="Script" path="res://Menus/MainMenu.gd" id="1_0mxpu"]
+[ext_resource type="Theme" uid="uid://vbl1j3ttu35k" path="res://Menus/gameTheme.tres" id="1_7qldj"]
+[ext_resource type="PackedScene" uid="uid://m34h5trdbnhi" path="res://Menus/LevelSelect.tscn" id="2_hf72t"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0mxpu")
+levelSelect = ExtResource("2_hf72t")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1004.0
+offset_bottom = 685.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5075
+anchor_top = 0.229412
+anchor_right = 0.5075
+anchor_bottom = 0.229412
+offset_left = -237.5
+offset_right = 237.5
+offset_bottom = 191.0
+grow_horizontal = 2
+theme = ExtResource("1_7qldj")
+theme_override_font_sizes/font_size = 164
+text = "PONGMANIA"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.466
+anchor_top = 0.517647
+anchor_right = 0.558
+anchor_bottom = 0.613235
+offset_left = -26.0
+offset_right = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_7qldj")
+theme_override_font_sizes/font_size = 48
+text = "PLAY"
+metadata/_edit_use_anchors_ = true
+
+[node name="Options" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.465
+anchor_top = 0.652941
+anchor_right = 0.557
+anchor_bottom = 0.748529
+offset_left = -26.0
+offset_right = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_7qldj")
+theme_override_font_sizes/font_size = 48
+text = "Options"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
